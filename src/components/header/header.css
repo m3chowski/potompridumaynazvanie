@@ -2,9 +2,12 @@
   outline: auto;
   height: 70px;
   width: 1220px;
-  display: grid;
-  grid-template-columns: 140px 180px 140px 120px;
+
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+.header-left {
+  display: grid;
+  grid-template-columns: 140px 180px 140px 120px;
 }
