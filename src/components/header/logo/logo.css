@@ -1,0 +1,13 @@
+.logo {
+  border-radius: 7px;
+  height: 70px;
+  width: 200px;
+}
+
+.logo img {
+  border-radius: 7px;
+  height: 70px;
+  width: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}

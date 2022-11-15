@@ -7,8 +7,17 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .header-left {
   display: grid;
-  grid-template-columns: 180px 400px 100px 100px;
+  width: 550px;
+  grid-template-columns: 200px 350px;
+}
+.header-right {
+  display: grid;
+  width: 240px;
+  grid-template-columns: 120px 120px;
 }
