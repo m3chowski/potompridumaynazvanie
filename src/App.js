@@ -1,7 +1,7 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { Header } from "./components/header/Header";
-import { ProductPage } from "./pages/Products-Page/Products-Page";
+import { Navigate, Routes, Route } from "react-router-dom";
+import { Header } from "./components/header";
+import { ProductPage } from "./pages/Products-Page";
 
 export const App = () => {
   return (
@@ -9,7 +9,12 @@ export const App = () => {
       <Header />
       <div>
         <Routes>
-          <Route path="/" element={<ProductPage />} />
+          <Route path="/products" element={<ProductPage />} />
+          <Route
+            path="/products/category/:category"
+            element={<ProductPage />}
+          />
+          <Route path="*" element={<Navigate to={"/products"} replace />} />
         </Routes>
       </div>
     </div>
