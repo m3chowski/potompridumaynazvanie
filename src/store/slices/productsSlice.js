@@ -3,7 +3,7 @@ import axios from "axios";
 
 const initialState = {
   products: [],
-  loading: false,
+  loading: true,
 };
 
 export const fetchProducts = createAsyncThunk(

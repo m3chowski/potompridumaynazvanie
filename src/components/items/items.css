@@ -1,7 +1,11 @@
 .items {
   background-color: rgb(255, 255, 255);
-  height: 730px;
+  /* height: 1200px; */
   width: 1010px;
   margin-left: 10px;
   border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

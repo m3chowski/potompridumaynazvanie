@@ -17,7 +17,9 @@ export const Items = () => {
 
   return (
     <div className="items">
-      {products ? products.map((el) => <ItemBlock />) : "loading..."}
+      {!loading
+        ? products.map((el, index) => <ItemBlock key={index} {...el} />)
+        : "loading..."}
     </div>
   );
 };

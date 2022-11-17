@@ -1,0 +1,31 @@
+.item-block {
+  background-color: rgb(244, 244, 244);
+  width: 230px;
+  height: 350px;
+  margin-top: 10px;
+  border-radius: 9px;
+  text-align: center;
+  z-index: 0;
+}
+
+.item-block h4 {
+  width: 210px;
+  height: 20px;
+}
+.item-block img {
+  margin-top: 10px;
+  border-radius: 9px;
+  height: 210px;
+  width: 210px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.item-block-price {
+  width: 230px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 39999999;
+}
