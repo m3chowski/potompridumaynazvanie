@@ -1,22 +1,46 @@
 import React from "react";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { increasedCartCount } from "../../../store/slices/cartSlice";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+
 import "./item-block.css";
 
-export const ItemBlock = ({ id, title, images, price }) => {
-  // console.log(images);
+export const ItemBlock = ({ discountPercentage, id, title, images, price }) => {
+  const dispatch = useDispatch();
+  const priceWithDiscount = (
+    price -
+    (price / 100) * discountPercentage
+  ).toFixed(2);
+
+  const onClickAddToCart = () => {
+    const item = {
+      id,
+      title,
+      images,
+      priceWithDiscount,
+    };
+    dispatch(increasedCartCount(item));
+  };
+
   return (
-    <Link to={`/products/${id}`}>
-      <div className="item-block">
-        <div className="item-block-img">
+    <div>
+      <Link to={`/products/${id}`}>
+        <div className="item-block">
           <img src={images[0]} />
+          <h4>{title}</h4>
         </div>
-        <h4>{title}</h4>
-        <div className="item-block-price">
+      </Link>
+      <div className="item-block-price">
+        <div className="item-block-price-bg">
           <p>{price} USD</p>
-          <Button variant="outlined">Buy</Button>
+          <span>{priceWithDiscount} USD</span>
         </div>
+        <Button variant="outlined" onClick={() => onClickAddToCart()}>
+          <AddShoppingCartIcon />
+        </Button>
       </div>
-    </Link>
+    </div>
   );
 };

@@ -1,11 +1,11 @@
 .item-block {
   background-color: rgb(244, 244, 244);
   width: 230px;
-  height: 350px;
-  margin-top: 10px;
+  height: 360px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border-radius: 9px;
   text-align: center;
-  z-index: 0;
 }
 
 .item-block h4 {
@@ -22,10 +22,28 @@
 }
 
 .item-block-price {
-  width: 230px;
-  height: 50px;
+  margin-top: -70px;
+  width: 220px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  z-index: 39999999;
+  position: absolute;
+}
+
+.item-block-price button {
+  background-color: rgb(255, 255, 255);
+}
+.item-block-price p {
+  text-decoration-line: line-through;
+  font-size: 12px;
+}
+
+.item-block-price-bg {
+  text-align: center;
+  margin-left: 10px;
+  width: 130px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 9px;
 }

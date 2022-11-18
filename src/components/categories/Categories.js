@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { setCategory } from "../../store/slices/navigationSlice";
 
 import "./categories.css";
+import { CategoryReset } from "./category-reset/Category-Reset";
 
 export const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -21,6 +22,7 @@ export const Categories = () => {
       {categories.map((el, index) => (
         <CategoriesButton title={el} key={index} category={category} />
       ))}
+      <CategoryReset />
     </div>
   );
 };
