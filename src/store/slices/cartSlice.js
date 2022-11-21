@@ -12,7 +12,6 @@ const changeTotalPrice = (state) =>
   (state.totalPrice = state.cartItems.reduce((sum, obj) => {
     return obj.priceWithDiscount * obj.count + sum;
   }, 0));
-console.log(findProduct);
 
 const cartSlice = createSlice({
   name: "cart",

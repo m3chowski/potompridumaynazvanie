@@ -23,11 +23,12 @@
 
 .item-block-price {
   margin-top: -70px;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 220px;
   height: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 90px 110px;
   position: absolute;
 }
 
@@ -36,13 +37,13 @@
 }
 .item-block-price p {
   text-decoration-line: line-through;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .item-block-price-bg {
   text-align: center;
-  margin-left: 10px;
-  width: 130px;
+  font-size: 13px;
+  width: 90px;
   height: 60px;
   background-color: rgb(255, 255, 255);
   border-radius: 9px;
