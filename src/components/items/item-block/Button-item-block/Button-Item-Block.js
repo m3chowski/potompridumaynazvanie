@@ -25,10 +25,7 @@ export const ButtonItemBlock = ({ obj }) => {
   };
 
   const onClickReduceCartCount = () => {
-    const item = {
-      id,
-    };
-    dispatch(reduceCartCount(item));
+    dispatch(reduceCartCount({ id }));
   };
 
   return (

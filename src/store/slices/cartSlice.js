@@ -1,7 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  cartItems: [],
+  cartItems: [
+    {
+      count: 3,
+      id: 1,
+      images: [
+        "https://i.dummyjson.com/data/products/1/1.jpg",
+        "https://i.dummyjson.com/data/products/1/2.jpg",
+        "https://i.dummyjson.com/data/products/1/3.jpg",
+        "https://i.dummyjson.com/data/products/1/4.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      ],
+      priceWithDiscount: "477.85",
+      title: "iPhone 9",
+    },
+  ],
   totalPrice: 0,
 };
 

@@ -1,0 +1,25 @@
+.cart-item-block {
+  margin: 10px;
+  background-color: rgb(244, 244, 244);
+  width: 1200px;
+  height: 150px;
+  border-radius: 9px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 1fr;
+}
+.cart-item-block img {
+  margin: 10px;
+  margin-top: 10px;
+  border-radius: 9px;
+  height: 130px;
+  width: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.cart-item-block-button {
+  text-align: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 120px 150px 0px;
+}

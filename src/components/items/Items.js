@@ -13,7 +13,6 @@ export const Items = () => {
   useEffect(() => {
     dispatch(fetchProducts({ pathname }));
   }, [pathname]);
-  console.log(products, loading);
 
   return (
     <div className="items">
