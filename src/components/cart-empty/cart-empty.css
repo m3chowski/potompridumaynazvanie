@@ -1,0 +1,13 @@
+.cart-empty {
+  height: 450px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 24px;
+}
+.cart-empty button {
+  font-size: 34px;
+  width: 240px;
+  height: 150px;
+}
