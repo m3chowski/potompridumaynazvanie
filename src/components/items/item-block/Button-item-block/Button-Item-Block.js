@@ -1,11 +1,12 @@
 import React from "react";
-import { Button, ButtonGroup } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
+import { Button, ButtonGroup } from "@mui/material";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import {
   increasedCartCount,
   reduceCartCount,
+  removeItem,
 } from "../../../../store/slices/cartSlice";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 export const ButtonItemBlock = ({ obj }) => {
   const { id, title, priceWithDiscount, images } = obj;
@@ -28,13 +29,23 @@ export const ButtonItemBlock = ({ obj }) => {
     dispatch(reduceCartCount({ id }));
   };
 
+  const onClickDeleteItem = () => {
+    dispatch(removeItem(id));
+  };
+
   return (
     <>
       {res && res.count ? (
         <ButtonGroup className="item-block-add-reduce">
-          <Button onClick={() => onClickReduceCartCount()}>-</Button>
+          <Button
+            onClick={
+              res.count <= 1 ? onClickDeleteItem : onClickReduceCartCount
+            }
+          >
+            -
+          </Button>
           <Button>{res.count}</Button>
-          <Button onClick={() => onClickAddToCart()}>+</Button>
+          <Button onClick={onClickAddToCart}>+</Button>
         </ButtonGroup>
       ) : (
         <Button variant="outlined" onClick={() => onClickAddToCart()}>

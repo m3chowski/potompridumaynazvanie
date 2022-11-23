@@ -9,6 +9,7 @@ import "./cart-item-block.css";
 
 export const CartItemBlock = (obj) => {
   const { priceWithDiscount, count, id, images, title } = obj;
+
   return (
     <div className="cart-item-block">
       <div>
@@ -18,12 +19,10 @@ export const CartItemBlock = (obj) => {
         <h3>{title}</h3>
       </div>
       <div className="cart-item-block-button">
-        <CartItemBlockButton id={id} />
-        <div>
-          <h3>{(priceWithDiscount * count).toFixed(2)} USD.</h3>
-          <span>for {count}</span>
-          <CartItemDeleteButton id={id} />
-        </div>
+        <CartItemBlockButton id={id} count={count} />
+        <h3>{(priceWithDiscount * count).toFixed(2)} USD.</h3>
+        <h5>Count: {count}</h5>
+        <CartItemDeleteButton id={id} />
       </div>
     </div>
   );
