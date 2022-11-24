@@ -16,7 +16,7 @@ const initialState = {
       title: "iPhone 9",
     },
   ],
-  totalPrice: 0,
+  totalPrice: 1433.55,
 };
 
 const findProduct = (state, payload) =>

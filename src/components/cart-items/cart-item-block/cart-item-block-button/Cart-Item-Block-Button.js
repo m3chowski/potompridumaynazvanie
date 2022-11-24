@@ -45,8 +45,12 @@ export const CartItemDeleteButton = ({ id }) => {
   return (
     <>
       {" "}
-      <Button variant="contained" sx={{ width: "60px", height: "60px" }}>
-        <DeleteIcon onClick={onClickDeleteItem} />
+      <Button
+        onClick={onClickDeleteItem}
+        variant="contained"
+        sx={{ width: "60px", height: "60px" }}
+      >
+        <DeleteIcon />
       </Button>
     </>
   );
