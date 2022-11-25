@@ -9,8 +9,10 @@ const initialState = {
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async (params) => {
-    const { pathname } = params;
-    const { data } = await axios.get(`https://dummyjson.com${pathname}`);
+    const { pathname, search } = params;
+    const { data } = await axios.get(
+      `https://dummyjson.com${pathname}${search}`
+    );
     return data;
   }
 );

@@ -12,11 +12,16 @@ export const App = () => {
       <div>
         <Routes>
           <Route path="/products" element={<ProductPage />} />
+          {/* <Route path="/products?:page" element={<ProductPage />} /> */}
           <Route path="/products/:id" element={<ItemPage />} />
           <Route
             path="/products/category/:category"
             element={<ProductPage />}
           />
+          {/* <Route
+            path="/products/category/:category:page"
+            element={<ProductPage />}
+          /> */}
           <Route path="/cart" element={<CartPage />} />
           <Route path="*" element={<Navigate to={"/products"} replace />} />
         </Routes>
