@@ -1,3 +1,9 @@
 .cart-items {
   /* margin-top: 10px; */
 }
+.order-button {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
