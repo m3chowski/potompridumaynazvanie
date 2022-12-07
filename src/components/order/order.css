@@ -3,16 +3,9 @@
   margin-right: auto;
   margin-top: 10px;
   background-color: rgb(255, 255, 255);
-  width: 1220px;
-  height: 700px;
+  width: 900px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-radius: 7px;
-}
-.order input {
-  height: 20px;
-  width: 150px;
-}
-
-.order p {
-  color: red;
-  font-size: 10px;
 }
