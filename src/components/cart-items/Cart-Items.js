@@ -7,7 +7,8 @@ import "./cart-items.css";
 
 export const CartItems = () => {
   const { cartItems } = useSelector((state) => state.cart);
-  console.log(cartItems);
+  const { totalPrice } = useSelector((state) => state.cart);
+
   return (
     <div className="cart-items">
       {cartItems.map((el, index) => (
@@ -15,8 +16,9 @@ export const CartItems = () => {
       ))}
       <div className="order-button">
         <Link to="/cart/order">
-          <Button variant="contained">Order</Button>
+          <Button variant="contained">Go to order</Button>
         </Link>
+        <h4>Total price: {totalPrice.toFixed(2)} USD </h4>
       </div>
     </div>
   );

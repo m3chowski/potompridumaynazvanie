@@ -3,3 +3,8 @@
   padding-left: 20px;
   width: 450px;
 }
+
+.order-fields button {
+  width: 446px;
+  margin-top: 20px;
+}

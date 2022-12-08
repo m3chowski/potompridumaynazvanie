@@ -1,0 +1,9 @@
+.order-items {
+  height: 395px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.order-items-main p {
+  padding-left: 20px;
+}

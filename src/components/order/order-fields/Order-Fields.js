@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux/es/exports";
 import { Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
 import "./order-fields.css";
 
 export const OrderFields = () => {
+  const { cartItems } = useSelector((state) => state.cart);
   const {
     register,
     handleSubmit,
@@ -11,7 +13,7 @@ export const OrderFields = () => {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    console.log({ ...data, cartItems });
     reset();
   };
   return (
@@ -24,6 +26,7 @@ export const OrderFields = () => {
           })}
           type="text"
           label="First Name"
+          margin="dense"
           error={!!errors?.firstName}
           helperText={errors?.firstName && "Length minimum 3 letter"}
         />
@@ -34,6 +37,7 @@ export const OrderFields = () => {
           })}
           type="text"
           label="Last Name"
+          margin="dense"
           error={!!errors?.lastName}
           helperText={!!errors?.lastName && "Length minimum 3 letter"}
         />
@@ -44,6 +48,7 @@ export const OrderFields = () => {
           })}
           type="text"
           label="Country"
+          margin="dense"
           error={!!errors?.country}
           helperText={!!errors?.country && "Length minimum 3 letter"}
         />
@@ -54,6 +59,7 @@ export const OrderFields = () => {
           })}
           type="text"
           label="City"
+          margin="dense"
           error={!!errors?.city}
           helperText={!!errors?.city && "Length minimum 3 letter"}
         />
@@ -64,6 +70,7 @@ export const OrderFields = () => {
           })}
           type="text"
           label="Address"
+          margin="dense"
           error={!!errors?.address}
           helperText={!!errors?.address && "Length minimum 3 letter"}
         />
@@ -75,11 +82,14 @@ export const OrderFields = () => {
           })}
           type="text"
           label="Email"
+          margin="dense"
           error={!!errors?.email}
           helperText={!!errors?.email && "Email format is x@xx.xx"}
         />
         <div>
-          <Button type="submit">Send</Button>
+          <Button variant="contained" type="submit">
+            Order
+          </Button>
         </div>
       </form>
     </div>
